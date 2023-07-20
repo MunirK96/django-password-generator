@@ -1,4 +1,6 @@
-<form action="password">
+{% extends 'generator/layout.html' %}
+{% block content %}
+<form action="{% url 'password'%}">
     <h1>Password Generator</h1>
     <label for="length">Select the length of your password</label>
     <select name="length" id="length">
@@ -23,3 +25,5 @@
 
     <button>Generate password</button>
 </form>
+
+{% endblock %}
